@@ -46,6 +46,7 @@
 				<configuration>
 					<systemPropertyVariables>
 						<browser>chrome</browser>
+						<headless>false</headless>
 					</systemPropertyVariables>
 
 					<suiteXmlFiles>

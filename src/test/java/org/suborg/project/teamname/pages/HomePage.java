@@ -1,0 +1,46 @@
+package org.suborg.project.teamname.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+/**
+ * @author raiaan
+ * @summary this class contains locators and actions
+ * on the homepage
+ *
+ */
+public class HomePage extends BasePage {
+
+	@FindBy(how = How.ID, using = "at-cv-lightbox-close")
+	protected WebElement popupcloselink;
+	
+	@FindBy(how = How.LINK_TEXT, using = "Input Forms")
+	protected WebElement inputformslink;
+	
+	@FindBy(how = How.LINK_TEXT, using = "Simple Form Demo")
+	protected WebElement simpleformdemolink;
+
+	
+	public HomePage() {
+       
+    }
+	
+	public void closeinitialpopup() throws InterruptedException {
+		Thread.sleep(3000);
+		popupcloselink.click();
+	}
+
+	public void clickInputFormsDropdown() {
+		inputformslink.click();
+	}
+
+	public FormsPage clickSimpleFormsLinkAndGoToFormsPage() {
+		simpleformdemolink.click();
+		FormsPage formspage = new FormsPage();
+		return formspage;
+		
+	}
+	
+}

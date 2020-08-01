@@ -14,6 +14,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class Driver implements WebDriver {
 
 	private static String browserName = System.getProperty("browser");
+	private static String headless = System.getProperty("headless");
 	private static WebDriver driver;
 
 	public Driver() {
@@ -22,9 +23,17 @@ public class Driver implements WebDriver {
 		if (browserName.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
 			
+			
+			if("true".equals(headless)) {
+				options.addArguments("--headless");
+	        } else {
+	       
+	        }
+			
 			String chromedriverpath = System.getProperty("user.dir") + "/src/test/resources/drivers/chromedriver";
 			System.setProperty("webdriver.chrome.driver", chromedriverpath);
 			Driver.driver = new ChromeDriver(options);
+			
 		}
 
 		if (browserName.equalsIgnoreCase("firefox")) {

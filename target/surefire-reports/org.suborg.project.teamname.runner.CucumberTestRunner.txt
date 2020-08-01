@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.suborg.project.teamname.runner.CucumberTestRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.713 s - in org.suborg.project.teamname.runner.CucumberTestRunner
