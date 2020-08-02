@@ -1,15 +1,19 @@
 package org.suborg.project.teamname.baseconfig;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+
 
 public class Driver implements WebDriver {
 
@@ -17,23 +21,27 @@ public class Driver implements WebDriver {
 	private static String headless = System.getProperty("headless");
 	private static WebDriver driver;
 
+	int defaultimplicitwaittime = 15;
+	int executionslowdowntime = 6;
+
 	public Driver() {
-	
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
-			
-			
-			if("true".equals(headless)) {
+
+			if ("true".equals(headless)) {
 				options.addArguments("--headless");
-	        } else {
-	       
-	        }
-			
+			} else {
+
+			}
+
 			String chromedriverpath = System.getProperty("user.dir") + "/src/test/resources/drivers/chromedriver";
 			System.setProperty("webdriver.chrome.driver", chromedriverpath);
 			Driver.driver = new ChromeDriver(options);
+			// driver.manage().timeouts().implicitlyWait(defaultimplicitwaittime,TimeUnit.SECONDS)
+
 			
+
 		}
 
 		if (browserName.equalsIgnoreCase("firefox")) {
@@ -75,6 +83,7 @@ public class Driver implements WebDriver {
 
 	@Override
 	public WebElement findElement(By by) {
+		
 		return Driver.driver.findElement(by);
 	}
 
@@ -122,4 +131,7 @@ public class Driver implements WebDriver {
 	public static WebDriver getDriver() {
 		return driver;
 	}
+	
+	
+
 }

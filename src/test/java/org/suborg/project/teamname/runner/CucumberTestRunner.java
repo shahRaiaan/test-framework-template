@@ -2,11 +2,9 @@ package org.suborg.project.teamname.runner;
 
 import org.suborg.project.teamname.baseconfig.ApplicationConstants;
 import org.suborg.project.teamname.baseconfig.Driver;
-import org.suborg.project.teamname.pages.BasePage;
 import org.suborg.project.teamname.pages.FormsPage;
 import org.suborg.project.teamname.pages.HomePage;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -42,13 +40,11 @@ public class CucumberTestRunner {
 		Driver.getDriver().get(ApplicationConstants.URL_HOMEPAGE);
 		HomePage homepage = new HomePage();
 		homepage.closeinitialpopup();
+		//Driver.getDriver().findElement(By.id("this will nt")).click();
 		homepage.clickInputFormsDropdown();
 		FormsPage formspage=homepage.clickSimpleFormsLinkAndGoToFormsPage();
 		formspage.enterusermessage("this is demo message");
 		
-		
-		//HomePage homepage = new HomePage();
-		Thread.sleep(20000);
 	
 	}
 	

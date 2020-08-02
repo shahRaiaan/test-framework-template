@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.suborg.project.teamname.utilities.CustomWaitsUtility;
+
 
 /**
  * @author raiaan
@@ -27,16 +29,18 @@ public class HomePage extends BasePage {
        
     }
 	
-	public void closeinitialpopup() throws InterruptedException {
-		Thread.sleep(3000);
+	public void closeinitialpopup() {
+		CustomWaitsUtility.visibilityOf(popupcloselink, 5);
 		popupcloselink.click();
 	}
 
 	public void clickInputFormsDropdown() {
+		CustomWaitsUtility.delay();
 		inputformslink.click();
 	}
 
 	public FormsPage clickSimpleFormsLinkAndGoToFormsPage() {
+		CustomWaitsUtility.delay();
 		simpleformdemolink.click();
 		FormsPage formspage = new FormsPage();
 		return formspage;

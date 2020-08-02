@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.suborg.project.teamname.utilities.CustomWaitsUtility;
 
 /**
  * @author raiaan
@@ -23,6 +24,7 @@ public class FormsPage extends BasePage {
 
 
 	public void enterusermessage(String usermessage) {
+		CustomWaitsUtility.delay();
 		entermessageplaceholder.sendKeys(usermessage);
 		
 	}
