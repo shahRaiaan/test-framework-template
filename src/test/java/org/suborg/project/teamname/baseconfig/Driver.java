@@ -23,6 +23,7 @@ public class Driver implements WebDriver {
 
 	int defaultimplicitwaittime = 15;
 	int executionslowdowntime = 6;
+	int pageloadtimeout = 10;
 
 	public Driver() {
 
@@ -39,6 +40,7 @@ public class Driver implements WebDriver {
 			System.setProperty("webdriver.chrome.driver", chromedriverpath);
 			Driver.driver = new ChromeDriver(options);
 			// driver.manage().timeouts().implicitlyWait(defaultimplicitwaittime,TimeUnit.SECONDS)
+			driver.manage().timeouts().pageLoadTimeout(pageloadtimeout, TimeUnit.SECONDS);
 
 			
 

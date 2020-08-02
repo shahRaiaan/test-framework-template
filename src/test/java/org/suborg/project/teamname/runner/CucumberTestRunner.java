@@ -1,5 +1,6 @@
 package org.suborg.project.teamname.runner;
 
+import org.openqa.selenium.By;
 import org.suborg.project.teamname.baseconfig.ApplicationConstants;
 import org.suborg.project.teamname.baseconfig.Driver;
 import org.suborg.project.teamname.pages.FormsPage;
@@ -40,7 +41,6 @@ public class CucumberTestRunner {
 		Driver.getDriver().get(ApplicationConstants.URL_HOMEPAGE);
 		HomePage homepage = new HomePage();
 		homepage.closeinitialpopup();
-		//Driver.getDriver().findElement(By.id("this will nt")).click();
 		homepage.clickInputFormsDropdown();
 		FormsPage formspage=homepage.clickSimpleFormsLinkAndGoToFormsPage();
 		formspage.enterusermessage("this is demo message");

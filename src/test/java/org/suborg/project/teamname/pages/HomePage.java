@@ -18,7 +18,7 @@ public class HomePage extends BasePage {
 	@FindBy(how = How.ID, using = "at-cv-lightbox-close")
 	protected WebElement popupcloselink;
 	
-	@FindBy(how = How.LINK_TEXT, using = "Input Forms")
+	@FindBy(how = How.LINK_TEXT, using = "Inputjkj Forms")
 	protected WebElement inputformslink;
 	
 	@FindBy(how = How.LINK_TEXT, using = "Simple Form Demo")
