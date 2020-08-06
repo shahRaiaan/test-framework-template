@@ -1,4 +1,4 @@
-#Author: your.email@your.domain.com
+#Author: raiaan 
 #Keywords Summary :
 #Feature: List of scenarios.
 #Scenario: Business rule through list of steps with arguments.
@@ -17,7 +17,7 @@
 ## (Comments)
 #Sample Feature Definition Template
 @DemoFeature1
-Feature: Title of your feature
+Feature: Demo feature
   I want to use this template for my feature file
 
   @tag1

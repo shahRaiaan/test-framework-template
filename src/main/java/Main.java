@@ -13,7 +13,7 @@ private static Logger logger = LoggerFactory.getLogger(Main.class);
 		logger.info("Info--------------- "+message);
 		logger.debug("debug--------------- "+message);
 		logger.error("error--------------- "+message);
-		
+		logger.trace("trace--------------- "+message);
 		
 		
 		

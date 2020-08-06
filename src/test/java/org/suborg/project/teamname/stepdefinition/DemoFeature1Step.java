@@ -2,6 +2,7 @@ package org.suborg.project.teamname.stepdefinition;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -34,6 +35,8 @@ public class DemoFeature1Step {
 	@And("^_1df1 yet another action")
 	public void yet_another_action() {
 		logger.info("completing yet another action");
+		
+		Assert.assertFalse(true);
 	}
 
 	@Then("^_1df1 I validate the outcomes")

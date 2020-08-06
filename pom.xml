@@ -9,7 +9,6 @@
 	<name>test-framework-template</name>
 	<description>template framework for automation testing using bdd</description>
 
-
 	<properties>
 		<java-verson></java-verson>
 	</properties>
@@ -26,8 +25,6 @@
 			<url>https://repo1.maven.org/maven/</url>
 		</pluginRepository>
 	</pluginRepositories>
-
-
 
 	<build>
 		<plugins>
@@ -129,28 +126,11 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.0.0-alpha-3</version>
 		</dependency>
-<!-- logging, refer to https://stackify.com/compare-java-logging-frameworks/ -->
-<dependency> 
-    <groupId>org.apache.logging.log4j</groupId> 
-    <artifactId>log4j-api</artifactId> 
-    <version>2.11.1</version> 
-</dependency> 
-<dependency> 
-    <groupId>org.apache.logging.log4j</groupId> 
-    <artifactId>log4j-core</artifactId> 
-    <version>2.11.1</version> 
-    </dependency> 
-<dependency> 
-    <groupId>org.apache.logging.log4j</groupId> 
-    <artifactId>log4j-slf4j-impl</artifactId> 
-    <version>2.11.1</version> 
+<dependency>
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-classic</artifactId>
+    <version>1.2.3</version>
 </dependency>
-
-
-
-
-
-
 
 	</dependencies>
 

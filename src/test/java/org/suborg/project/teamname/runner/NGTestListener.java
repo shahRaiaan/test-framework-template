@@ -1,8 +1,5 @@
 package org.suborg.project.teamname.runner;
 
-import java.io.IOException;
-
-import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
@@ -34,7 +31,8 @@ public class NGTestListener implements ITestListener {
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
-        System.out.println("On test skipped");
+       
+    	System.out.println("On test skipped");
     }
 
     @Override
