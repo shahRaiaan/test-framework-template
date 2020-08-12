@@ -29,6 +29,19 @@ public class CustomWaitsUtility {
 		}
 
 	}
+	public static void delay(long delaytime) {
+
+		TimeUnit time = TimeUnit.SECONDS;
+		try {
+			time.sleep(delaytime);
+		}
+
+		catch (InterruptedException e) {
+			e.printStackTrace();
+			logger.debug("Interrupted " + "while Sleeping");
+		}
+
+	}
 
 	public static WebElement visibilityOf(WebElement webelement, int timeout) {
 		WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));

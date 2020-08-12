@@ -12,10 +12,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Driver implements WebDriver {
-
+	private static Logger logger = LoggerFactory.getLogger(Driver.class);
 	private static String browserName = System.getProperty("browser");
 	private static String headless = System.getProperty("headless");
 	private static WebDriver driver;
@@ -31,8 +32,9 @@ public class Driver implements WebDriver {
 
 			if ("true".equals(headless)) {
 				options.addArguments("--headless");
+				logger.info("chrome browser running with headless mode on");
 			} else {
-
+				logger.debug("chrome browser running with headless mode off");
 			}
 
 			String chromedriverpath = System.getProperty("user.dir") + "/src/test/resources/drivers/chromedriver";
@@ -41,20 +43,19 @@ public class Driver implements WebDriver {
 			// driver.manage().timeouts().implicitlyWait(defaultimplicitwaittime,TimeUnit.SECONDS)
 			driver.manage().timeouts().pageLoadTimeout(pageloadtimeout, TimeUnit.SECONDS);
 
-			
-
 		}
 
-		if (browserName.equalsIgnoreCase("firefox")) {
+		else if (browserName.equalsIgnoreCase("firefox")) {
 			String firefoxdriverpath = System.getProperty("user.dir") + "/src/test/resources/drivers/geckodriver";
 			System.setProperty("webdriver.gecko.driver", firefoxdriverpath);
 			Driver.driver = new FirefoxDriver();
 		}
 
-		if (browserName.equalsIgnoreCase("ie"))
+		else if (browserName.equalsIgnoreCase("ie")) {
 			Driver.driver = new InternetExplorerDriver();
-		{
 
+		} else {
+			logger.debug("Unknown browser name specified in the system variable");
 		}
 
 	}
@@ -84,7 +85,7 @@ public class Driver implements WebDriver {
 
 	@Override
 	public WebElement findElement(By by) {
-		
+
 		return Driver.driver.findElement(by);
 	}
 
@@ -132,7 +133,5 @@ public class Driver implements WebDriver {
 	public static WebDriver getDriver() {
 		return driver;
 	}
-	
-	
 
 }
