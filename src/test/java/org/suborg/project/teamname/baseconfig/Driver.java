@@ -12,10 +12,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class Driver implements WebDriver {
-
+	private static Logger logger = LoggerFactory.getLogger(Driver.class);
 	private static String browserName = System.getProperty("browser");
 	private static String headless = System.getProperty("headless");
 	private static WebDriver driver;
@@ -32,7 +34,7 @@ public class Driver implements WebDriver {
 			if ("true".equals(headless)) {
 				options.addArguments("--headless");
 			} else {
-
+				logger.debug("chrome browser running with headless mode off");
 			}
 
 			String chromedriverpath = System.getProperty("user.dir") + "/src/test/resources/drivers/chromedriver";

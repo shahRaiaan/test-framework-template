@@ -2,6 +2,10 @@ package org.suborg.project.teamname.stepdefinition;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.suborg.project.teamname.baseconfig.ApplicationConstants;
+import org.suborg.project.teamname.baseconfig.Driver;
+import org.suborg.project.teamname.pages.FormsPage;
+import org.suborg.project.teamname.pages.HomePage;
 import org.testng.Assert;
 
 import io.cucumber.java.en.And;
@@ -15,6 +19,14 @@ public class DemoFeature1Step {
 	@Given("^_1df1 I want to write a step with precondition")
 	public void i_want_to_write_a_step_with_precondition() {
 		logger.info("Writing step with precondition");
+
+		Driver.getDriver().get(ApplicationConstants.URL_HOMEPAGE);
+		HomePage homepage = new HomePage();
+		homepage.closeinitialpopup();
+		homepage.clickInputFormsDropdown();
+		FormsPage formspage = homepage.clickSimpleFormsLinkAndGoToFormsPage();
+		formspage.enterusermessage("this is demo message");
+
 	}
 
 	@And("^_1df1 some other precondition")
@@ -35,8 +47,8 @@ public class DemoFeature1Step {
 	@And("^_1df1 yet another action")
 	public void yet_another_action() {
 		logger.info("completing yet another action");
-		
-		Assert.assertFalse(true);
+
+		//Assert.assertFalse(true);
 	}
 
 	@Then("^_1df1 I validate the outcomes")
@@ -49,10 +61,6 @@ public class DemoFeature1Step {
 		logger.info("validating more outcomes");
 	}
 
-	
-	
-	
-	
 	@Given("^_2df1 I want to write a step with (.+)$")
 	public void _2_i_want_to_write_a_step_with_name1(String name) {
 		logger.info("writing a step with the name - " + name);
