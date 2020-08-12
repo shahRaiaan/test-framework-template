@@ -3,7 +3,7 @@
     "line": 20,
     "elements": [
       {
-        "start_timestamp": "2020-08-11T20:16:17.276Z",
+        "start_timestamp": "2020-08-12T22:34:41.815Z",
         "line": 24,
         "name": "Title of your scenario",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 7763413000,
+              "duration": 8202013000,
               "status": "passed"
             },
             "line": 25,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 224000,
+              "duration": 350000,
               "status": "passed"
             },
             "line": 26,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 113000,
+              "duration": 277000,
               "status": "passed"
             },
             "line": 27,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 92000,
+              "duration": 396000,
               "status": "passed"
             },
             "line": 28,
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 83000,
+              "duration": 354000,
               "status": "passed"
             },
             "line": 29,
@@ -73,7 +73,7 @@
           },
           {
             "result": {
-              "duration": 85000,
+              "duration": 282000,
               "status": "passed"
             },
             "line": 30,
@@ -85,7 +85,7 @@
           },
           {
             "result": {
-              "duration": 128000,
+              "duration": 176000,
               "status": "passed"
             },
             "line": 31,
@@ -106,7 +106,7 @@
         ]
       },
       {
-        "start_timestamp": "2020-08-11T20:16:25.935Z",
+        "start_timestamp": "2020-08-12T22:34:54.260Z",
         "line": 41,
         "name": "Title of your scenario outline",
         "description": "",
@@ -116,7 +116,7 @@
         "steps": [
           {
             "result": {
-              "duration": 618000,
+              "duration": 793000,
               "status": "passed"
             },
             "line": 35,
@@ -134,7 +134,7 @@
           },
           {
             "result": {
-              "duration": 242000,
+              "duration": 297000,
               "status": "passed"
             },
             "line": 36,
@@ -152,7 +152,7 @@
           },
           {
             "result": {
-              "duration": 302000,
+              "duration": 298000,
               "status": "passed"
             },
             "line": 37,
@@ -179,7 +179,7 @@
         ]
       },
       {
-        "start_timestamp": "2020-08-11T20:16:26.799Z",
+        "start_timestamp": "2020-08-12T22:34:58.561Z",
         "line": 42,
         "name": "Title of your scenario outline",
         "description": "",
@@ -189,7 +189,7 @@
         "steps": [
           {
             "result": {
-              "duration": 307000,
+              "duration": 583000,
               "status": "passed"
             },
             "line": 35,
@@ -207,7 +207,7 @@
           },
           {
             "result": {
-              "duration": 189000,
+              "duration": 181000,
               "status": "passed"
             },
             "line": 36,
@@ -225,7 +225,7 @@
           },
           {
             "result": {
-              "duration": 91000,
+              "duration": 207000,
               "status": "passed"
             },
             "line": 37,
