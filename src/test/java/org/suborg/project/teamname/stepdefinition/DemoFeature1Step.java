@@ -2,6 +2,10 @@ package org.suborg.project.teamname.stepdefinition;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.suborg.project.teamname.baseconfig.ApplicationConstants;
+import org.suborg.project.teamname.baseconfig.Driver;
+import org.suborg.project.teamname.pages.FormsPage;
+import org.suborg.project.teamname.pages.HomePage;
 import org.testng.Assert;
 
 import io.cucumber.java.en.And;
@@ -20,6 +24,12 @@ public class DemoFeature1Step {
 	@And("^_1df1 some other precondition")
 	public void some_other_precondition() {
 		logger.info("Writing step with some other precondition");
+		Driver.getDriver().get(ApplicationConstants.URL_HOMEPAGE);
+		HomePage homepage = new HomePage();
+		homepage.closeinitialpopup();
+		homepage.clickInputFormsDropdown();
+		FormsPage formspage = homepage.clickSimpleFormsLinkAndGoToFormsPage();
+		formspage.enterusermessage("this is demo message");
 	}
 
 	@When("^_1df1 I complete action")

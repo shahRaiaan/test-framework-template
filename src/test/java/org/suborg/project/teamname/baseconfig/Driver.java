@@ -1,10 +1,13 @@
 package org.suborg.project.teamname.baseconfig;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,6 +15,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +30,7 @@ public class Driver implements WebDriver {
 	int executionslowdowntime = 6;
 	int pageloadtimeout = 10;
 
-	public Driver() {
+	public Driver() throws MalformedURLException {
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
@@ -54,7 +59,18 @@ public class Driver implements WebDriver {
 		else if (browserName.equalsIgnoreCase("ie")) {
 			Driver.driver = new InternetExplorerDriver();
 
-		} else {
+		} 
+		else if (browserName.equalsIgnoreCase("remote")) {
+			
+			DesiredCapabilities dc = new DesiredCapabilities();
+			dc.setBrowserName("chrome");
+			//dc.setPlatform(Platform.WIN10);
+			Driver.driver= new RemoteWebDriver(new URL(ApplicationConstants.URL_SELENIUMGRID_HUB),dc);
+		}
+		
+		
+		
+		else {
 			logger.debug("Unknown browser name specified in the system variable");
 		}
 
