@@ -1,4 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.505 s - in TestSuite
+Tests run: 9, Failures: 1, Errors: 0, Skipped: 8, Time elapsed: 1.04 s <<< FAILURE! - in TestSuite
+setup(org.suborg.project.teamname.runner.CucumberTestRunner)  Time elapsed: 0.888 s  <<< FAILURE!
+org.openqa.selenium.remote.UnreachableBrowserException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
+System info: host: 'RAIAANs-Air.fios-router.home', ip: 'fe80:0:0:0:409:8e3e:8c32:9ab1%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.5', java.version: '14.0.2'
+Driver info: driver.version: Driver
+	at org.suborg.project.teamname.runner.CucumberTestRunner.setup(CucumberTestRunner.java:19)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException: Failed to connect to /192.168.1.81:4444
+	at org.suborg.project.teamname.runner.CucumberTestRunner.setup(CucumberTestRunner.java:19)
+Caused by: java.net.ConnectException: Failed to connect to /192.168.1.81:4444
+	at org.suborg.project.teamname.runner.CucumberTestRunner.setup(CucumberTestRunner.java:19)
+Caused by: java.net.ConnectException: Connection refused
+	at org.suborg.project.teamname.runner.CucumberTestRunner.setup(CucumberTestRunner.java:19)
+
