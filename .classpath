@@ -43,14 +43,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template/src/main/resources/selenium-server-standalone-3.141.59.jar"/>
-	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="ignore_optional_problems" value="true"/>
-			<attribute name="m2e-apt" value="true"/>
-			<attribute name="test" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

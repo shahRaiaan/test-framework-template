@@ -8,12 +8,10 @@
     <classes>
       <class name="org.suborg.project.teamname.runner.CucumberTestRunner">
         <methods>
-          <include name="beforealltestonceonly"/>
-          <include name="afteralltestonceonly"/>
+          <include name="beforeScenario"/>
           <include name="runScenario" invocation-numbers="0"/>
-          <include name="setup"/>
           <include name="tearDownClass"/>
-          <include name="teardown"/>
+          <include name="afterScenario"/>
           <include name="setUpClass"/>
         </methods>
       </class> <!-- org.suborg.project.teamname.runner.CucumberTestRunner -->

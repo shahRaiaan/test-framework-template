@@ -70,7 +70,7 @@ formatter.match({
   "location": "org.suborg.project.teamname.stepdefinition.DemoFeature1Step.yet_another_action()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: expected [false] but found [true]\n\tat org.testng.Assert.fail(Assert.java:97)\n\tat org.testng.Assert.failNotEquals(Assert.java:969)\n\tat org.testng.Assert.assertFalse(Assert.java:65)\n\tat org.testng.Assert.assertFalse(Assert.java:75)\n\tat org.suborg.project.teamname.stepdefinition.DemoFeature1Step.yet_another_action(DemoFeature1Step.java:49)\n\tat ✽._1df1 yet another action(file:///Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template/src/test/resources/features/DemoFeature1.feature:29)\n",
+  "error_message": "java.lang.AssertionError: expected [false] but found [true]\n\tat org.testng.Assert.fail(Assert.java:97)\n\tat org.testng.Assert.failNotEquals(Assert.java:969)\n\tat org.testng.Assert.assertFalse(Assert.java:65)\n\tat org.testng.Assert.assertFalse(Assert.java:75)\n\tat org.suborg.project.teamname.stepdefinition.DemoFeature1Step.yet_another_action(DemoFeature1Step.java:52)\n\tat ✽._1df1 yet another action(file:///Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template/src/test/resources/features/DemoFeature1.feature:29)\n",
   "status": "failed"
 });
 formatter.step({

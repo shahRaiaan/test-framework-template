@@ -1,12 +1,11 @@
 package org.suborg.project.teamname.runner;
-
 import java.net.MalformedURLException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.suborg.project.teamname.baseconfig.Driver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
@@ -15,30 +14,25 @@ import io.cucumber.testng.CucumberOptions;
 		"html:target/site/cucumber-pretty" }, features = { "src/test/resources/features" }, glue = {
 				"org.suborg.project.teamname.stepdefinition" }, dryRun = false, tags = { "@DemoFeature1" })
 public class CucumberTestRunner extends AbstractTestNGCucumberTests {
+	private static Logger logger = LoggerFactory.getLogger(CucumberTestRunner.class);
 
-	@BeforeSuite
-	public void beforealltestonceonly() {
-		System.out.println("before all trest once---------------------------");
-	}
- 
-	@AfterSuite
-	public void afteralltestonceonly() {
-		System.out.println("after all trest once---------------------------");
-	}
-	@BeforeMethod
-	public void setup() throws MalformedURLException {
-		new Driver(); //test -Dcucumber.options="--tags '@tag1'"
-		
-		
-	}
 	
-	@AfterMethod
-	public void teardown() {
-		Driver.getDriver().quit();
-
+@BeforeMethod	
+public void setup() {
+	logger.debug("--------------setup iniated for the test-------------------");
+	try {
+		new Driver();
+	} catch (MalformedURLException e) {
+		e.printStackTrace();
 	}
+	logger.debug("--------------setup completed. ready for test execution-------------------");
+}
 
-
+@AfterMethod
+public void teardown() {
+	Driver.getDriver().quit();
+	logger.debug("--------------teardown() completed -------------------");
+}
 
 
 }

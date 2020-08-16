@@ -1,59 +1,54 @@
 package org.suborg.project.teamname.runner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class NGTestListener implements ITestListener {
+/**
+ * @author raiaan listener for the CucumberTestRunner for good explanation on
+ *         testng listeners use the following url -
+ *         https://blog.trigent.com/how-to-use-listeners-of-testng-to-generate-test-logs#
+ */
+public class NGTestListener implements ITestListener{
+	private static Logger logger = LoggerFactory.getLogger(NGTestListener.class);
 
-   // ExtentReportUtil extentReportUtil = new ExtentReportUtil();
+	@Override
+	public void onStart(ITestContext iTestContext) {// same as @BeforeSuite
+		logger.info("--------resource initialization for all tests completed-----------------------");
+	}
 
-    @Override
-    public void onTestStart(ITestResult iTestResult) {
-        System.out.println("On test start");
-    }
+	@Override
+	public void onFinish(ITestContext iTestContext) {// same as @AfterSuite
+		logger.info("--------entire test suite execution is completed-----------------------");
+	}
 
-    @Override
-    public void onTestSuccess(ITestResult iTestResult) {
+	@Override
+	public void onTestStart(ITestResult iTestResult) {
+		logger.info("On test start--------------starting test-------------------");
+		
+	}
 
-        System.out.println("On test Sucess");
-    }
+	@Override
+	public void onTestSuccess(ITestResult iTestResult) {
+		logger.info("--The test was successful--");
+	}
 
-   // @Override
-    //public void onTestFailure(ITestResult iTestResult) {
-      //  System.out.println("On test failure");
+	@Override
+	public void onTestFailure(ITestResult iTestResult) {
+		logger.info("--The test failed--");
+	}
 
-        //try{
-          //  extentReportUtil.ExtentReportScreenshot();
-        //}catch (IOException e){
-          //  e.printStackTrace();
-        //}
-    //}
+	@Override
+	public void onTestSkipped(ITestResult iTestResult) {
+		logger.info("--The test was skipped--");
+	}
 
-    @Override
-    public void onTestSkipped(ITestResult iTestResult) {
-       
-    	System.out.println("On test skipped");
-    }
+	@Override
+	public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
+	
+	}
+	
 
-    @Override
-    public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
-        System.out.println("On test percentage");
-    }
-
-  //  @Override
-   // public void onStart(ITestContext iTestContext) {
-     //   System.out.println("On start");
-
-       // extentReportUtil.ExtentReport();
-
-        //ToDo: Feature - Hard coding the feature name
-        //features = extentReportUtil.extent.createTest(Feature.class, "Login Feature");
-
-    //}
-
-   // @Override
-    //public void onFinish(ITestContext iTestContext) {
-      //  System.out.println("On finish");
-        //extentReportUtil.FlushReport();
-   // }
 }

@@ -2,27 +2,23 @@
 <testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-14T16:34:38 EDT" name="Suite" finished-at="2020-08-14T16:35:00 EDT" duration-ms="21665">
+  <suite started-at="2020-08-16T15:19:53 EDT" name="Suite" finished-at="2020-08-16T15:20:05 EDT" duration-ms="11544">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@1fa121e2]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2020-08-14T16:34:38 EDT" name="Complete test run" finished-at="2020-08-14T16:35:00 EDT" duration-ms="21665">
+    <test started-at="2020-08-16T15:19:53 EDT" name="Complete test run" finished-at="2020-08-16T15:20:05 EDT" duration-ms="11544">
       <class name="org.suborg.project.teamname.runner.CucumberTestRunner">
-        <test-method is-config="true" signature="beforealltestonceonly()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" started-at="2020-08-14T16:34:38 EDT" name="beforealltestonceonly" finished-at="2020-08-14T16:34:38 EDT" duration-ms="7" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforealltestonceonly -->
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" started-at="2020-08-14T16:34:38 EDT" name="setUpClass" finished-at="2020-08-14T16:34:38 EDT" duration-ms="213" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@1fa121e2]" started-at="2020-08-16T15:19:53 EDT" name="setUpClass" finished-at="2020-08-16T15:19:54 EDT" duration-ms="178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" started-at="2020-08-14T16:34:38 EDT" name="setup" finished-at="2020-08-14T16:34:42 EDT" duration-ms="4007" status="PASS">
+        <test-method is-config="true" signature="beforeScenario()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@1fa121e2]" started-at="2020-08-16T15:19:54 EDT" name="beforeScenario" finished-at="2020-08-16T15:19:55 EDT" duration-ms="1295" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" started-at="2020-08-14T16:34:42 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-14T16:34:50 EDT" duration-ms="8048" status="FAIL">
+        </test-method> <!-- beforeScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@1fa121e2]" started-at="2020-08-16T15:19:55 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-16T15:20:03 EDT" duration-ms="8168" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -45,7 +41,7 @@ at org.testng.Assert.fail(Assert.java:97)
 at org.testng.Assert.failNotEquals(Assert.java:969)
 at org.testng.Assert.assertFalse(Assert.java:65)
 at org.testng.Assert.assertFalse(Assert.java:75)
-at org.suborg.project.teamname.stepdefinition.DemoFeature1Step.yet_another_action(DemoFeature1Step.java:49)
+at org.suborg.project.teamname.stepdefinition.DemoFeature1Step.yet_another_action(DemoFeature1Step.java:52)
 at ✽._1df1 yet another action(file:///Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template/src/test/resources/features/DemoFeature1.feature:29)
 ]]>
             </full-stacktrace>
@@ -53,15 +49,15 @@ at ✽._1df1 yet another action(file:///Users/smr1/Documents/AutomationTemplateP
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" started-at="2020-08-14T16:34:50 EDT" name="teardown" finished-at="2020-08-14T16:34:50 EDT" duration-ms="100" status="PASS">
+        <test-method is-config="true" signature="afterScenario()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@1fa121e2]" started-at="2020-08-16T15:20:03 EDT" name="afterScenario" finished-at="2020-08-16T15:20:03 EDT" duration-ms="91" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" started-at="2020-08-14T16:34:50 EDT" name="setup" finished-at="2020-08-14T16:34:55 EDT" duration-ms="4864" status="PASS">
+        </test-method> <!-- afterScenario -->
+        <test-method is-config="true" signature="beforeScenario()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@1fa121e2]" started-at="2020-08-16T15:20:03 EDT" name="beforeScenario" finished-at="2020-08-16T15:20:04 EDT" duration-ms="762" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" started-at="2020-08-14T16:34:55 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-14T16:34:55 EDT" duration-ms="7" status="PASS">
+        </test-method> <!-- beforeScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@1fa121e2]" started-at="2020-08-16T15:20:04 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-16T15:20:04 EDT" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -77,15 +73,15 @@ at ✽._1df1 yet another action(file:///Users/smr1/Documents/AutomationTemplateP
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" started-at="2020-08-14T16:34:55 EDT" name="teardown" finished-at="2020-08-14T16:34:55 EDT" duration-ms="103" status="PASS">
+        <test-method is-config="true" signature="afterScenario()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@1fa121e2]" started-at="2020-08-16T15:20:04 EDT" name="afterScenario" finished-at="2020-08-16T15:20:04 EDT" duration-ms="79" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" started-at="2020-08-14T16:34:55 EDT" name="setup" finished-at="2020-08-14T16:35:00 EDT" duration-ms="4082" status="PASS">
+        </test-method> <!-- afterScenario -->
+        <test-method is-config="true" signature="beforeScenario()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@1fa121e2]" started-at="2020-08-16T15:20:04 EDT" name="beforeScenario" finished-at="2020-08-16T15:20:05 EDT" duration-ms="777" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" started-at="2020-08-14T16:35:00 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-14T16:35:00 EDT" duration-ms="6" status="PASS">
+        </test-method> <!-- beforeScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@1fa121e2]" started-at="2020-08-16T15:20:05 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-16T15:20:05 EDT" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -101,18 +97,14 @@ at ✽._1df1 yet another action(file:///Users/smr1/Documents/AutomationTemplateP
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" started-at="2020-08-14T16:35:00 EDT" name="teardown" finished-at="2020-08-14T16:35:00 EDT" duration-ms="112" status="PASS">
+        <test-method is-config="true" signature="afterScenario()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@1fa121e2]" started-at="2020-08-16T15:20:05 EDT" name="afterScenario" finished-at="2020-08-16T15:20:05 EDT" duration-ms="76" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" started-at="2020-08-14T16:35:00 EDT" name="tearDownClass" finished-at="2020-08-14T16:35:00 EDT" duration-ms="95" status="PASS">
+        </test-method> <!-- afterScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@1fa121e2]" started-at="2020-08-16T15:20:05 EDT" name="tearDownClass" finished-at="2020-08-16T15:20:05 EDT" duration-ms="71" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="afteralltestonceonly()[pri:0, instance:org.suborg.project.teamname.runner.CucumberTestRunner@35fc6dc4]" started-at="2020-08-14T16:35:00 EDT" name="afteralltestonceonly" finished-at="2020-08-14T16:35:00 EDT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afteralltestonceonly -->
       </class> <!-- org.suborg.project.teamname.runner.CucumberTestRunner -->
     </test> <!-- Complete test run -->
   </suite> <!-- Suite -->

@@ -61,7 +61,7 @@ public class Driver implements WebDriver {
 
 		} 
 		else if (browserName.equalsIgnoreCase("remote")) {
-			
+			// in future modify maven with sytemvariables (remote browser-name, browser-version, platform-name) 
 			DesiredCapabilities dc = new DesiredCapabilities();
 			dc.setBrowserName("chrome");
 			//dc.setPlatform(Platform.WIN10);
