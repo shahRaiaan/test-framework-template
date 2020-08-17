@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="17.964" tests="3" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="14"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template/target/test-classes:/Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template/target/classes:/Users/smr1/.m2/repository/io/cucumber/cucumber-java/5.7.0/cucumber-java-5.7.0.jar:/Users/smr1/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-testng/5.7.0/cucumber-testng-5.7.0.jar:/Users/smr1/.m2/repository/org/testng/testng/7.1.0/testng-7.1.0.jar:/Users/smr1/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/smr1/.m2/repository/com/google/inject/guice/4.1.0/guice-4.1.0-no_aop.jar:/Users/smr1/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/smr1/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/smr1/.m2/repository/org/yaml/snakeyaml/1.21/snakeyaml-1.21.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-junit/5.7.0/cucumber-junit-5.7.0.jar:/Users/smr1/.m2/repository/junit/junit/4.13/junit-4.13.jar:/Users/smr1/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-picocontainer/5.7.0/cucumber-picocontainer-5.7.0.jar:/Users/smr1/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-core/5.7.0/cucumber-core-5.7.0.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-gherkin/5.7.0/cucumber-gherkin-5.7.0.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-gherkin-vintage/5.7.0/cucumber-gherkin-vintage-5.7.0.jar:/Users/smr1/.m2/repository/io/cucumber/tag-expressions/2.0.4/tag-expressions-2.0.4.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-expressions/8.3.1/cucumber-expressions-8.3.1.jar:/Users/smr1/.m2/repository/io/cucumber/datatable/3.3.1/datatable-3.3.1.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-plugin/5.7.0/cucumber-plugin-5.7.0.jar:/Users/smr1/.m2/repository/io/cucumber/docstring/5.7.0/docstring-5.7.0.jar:/Users/smr1/.m2/repository/com/aventstack/extentreports/4.1.5/extentreports-4.1.5.jar:/Users/smr1/.m2/repository/org/freemarker/freemarker/2.3.29/freemarker-2.3.29.jar:/Users/smr1/.m2/repository/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar:/Users/smr1/.m2/repository/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar:/Users/smr1/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/smr1/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/Users/smr1/.m2/repository/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2.jar:/Users/smr1/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/smr1/.m2/repository/org/mongodb/mongodb-driver/3.12.0/mongodb-driver-3.12.0.jar:/Users/smr1/.m2/repository/org/mongodb/mongodb-driver-core/3.12.0/mongodb-driver-core-3.12.0.jar:/Users/smr1/.m2/repository/org/mongodb/bson/3.12.0/bson-3.12.0.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-java/4.0.0-alpha-3/selenium-java-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-api/4.0.0-alpha-3/selenium-api-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.0.0-alpha-3/selenium-chrome-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/com/google/guava/guava/27.1-jre/guava-27.1-jre.jar:/Users/smr1/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/smr1/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/smr1/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/smr1/.m2/repository/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.jar:/Users/smr1/.m2/repository/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0.jar:/Users/smr1/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/smr1/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.0.0-alpha-3/selenium-chromium-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-devtools/4.0.0-alpha-3/selenium-devtools-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-http/4.0.0-alpha-3/selenium-http-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-json/4.0.0-alpha-3/selenium-json-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.0.0-alpha-3/selenium-edge-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-edgehtml-driver/4.0.0-alpha-3/selenium-edgehtml-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.0.0-alpha-3/selenium-firefox-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-firefox-xpi-driver/4.0.0-alpha-3/selenium-firefox-xpi-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.0.0-alpha-3/selenium-ie-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/4.0.0-alpha-3/selenium-opera-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.0.0-alpha-3/selenium-remote-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/com/squareup/okhttp3/okhttp/4.0.1/okhttp-4.0.1.jar:/Users/smr1/.m2/repository/com/squareup/okio/okio/2.2.2/okio-2.2.2.jar:/Users/smr1/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.3.40/kotlin-stdlib-1.3.40.jar:/Users/smr1/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.3.40/kotlin-stdlib-common-1.3.40.jar:/Users/smr1/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/smr1/.m2/repository/io/opentracing/opentracing-api/0.33.0/opentracing-api-0.33.0.jar:/Users/smr1/.m2/repository/net/bytebuddy/byte-buddy/1.9.12/byte-buddy-1.9.12.jar:/Users/smr1/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.0.0-alpha-3/selenium-safari-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-support/4.0.0-alpha-3/selenium-support-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/smr1/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/smr1/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/Users/smr1/.m2/repository/org/apache/maven/surefire/surefire-testng-utils/2.21.0/surefire-testng-utils-2.21.0.jar:/Users/smr1/.m2/repository/org/apache/maven/surefire/surefire-grouper/2.21.0/surefire-grouper-2.21.0.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="14"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-14.0.2.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template/target/surefire/surefirebooter13106173502089377143.jar /Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template/target/surefire 2020-08-17T15-59-58_857-jvmRun1 surefire14150680042855514399tmp surefire_09004962534716838753tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template/target/test-classes:/Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template/target/classes:/Users/smr1/.m2/repository/io/cucumber/cucumber-java/5.7.0/cucumber-java-5.7.0.jar:/Users/smr1/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-testng/5.7.0/cucumber-testng-5.7.0.jar:/Users/smr1/.m2/repository/org/testng/testng/7.1.0/testng-7.1.0.jar:/Users/smr1/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/smr1/.m2/repository/com/google/inject/guice/4.1.0/guice-4.1.0-no_aop.jar:/Users/smr1/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/smr1/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/smr1/.m2/repository/org/yaml/snakeyaml/1.21/snakeyaml-1.21.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-junit/5.7.0/cucumber-junit-5.7.0.jar:/Users/smr1/.m2/repository/junit/junit/4.13/junit-4.13.jar:/Users/smr1/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-picocontainer/5.7.0/cucumber-picocontainer-5.7.0.jar:/Users/smr1/.m2/repository/org/picocontainer/picocontainer/2.15/picocontainer-2.15.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-core/5.7.0/cucumber-core-5.7.0.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-gherkin/5.7.0/cucumber-gherkin-5.7.0.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-gherkin-vintage/5.7.0/cucumber-gherkin-vintage-5.7.0.jar:/Users/smr1/.m2/repository/io/cucumber/tag-expressions/2.0.4/tag-expressions-2.0.4.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-expressions/8.3.1/cucumber-expressions-8.3.1.jar:/Users/smr1/.m2/repository/io/cucumber/datatable/3.3.1/datatable-3.3.1.jar:/Users/smr1/.m2/repository/io/cucumber/cucumber-plugin/5.7.0/cucumber-plugin-5.7.0.jar:/Users/smr1/.m2/repository/io/cucumber/docstring/5.7.0/docstring-5.7.0.jar:/Users/smr1/.m2/repository/com/aventstack/extentreports/4.1.5/extentreports-4.1.5.jar:/Users/smr1/.m2/repository/org/freemarker/freemarker/2.3.29/freemarker-2.3.29.jar:/Users/smr1/.m2/repository/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar:/Users/smr1/.m2/repository/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar:/Users/smr1/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/smr1/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/Users/smr1/.m2/repository/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2.jar:/Users/smr1/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/smr1/.m2/repository/org/mongodb/mongodb-driver/3.12.0/mongodb-driver-3.12.0.jar:/Users/smr1/.m2/repository/org/mongodb/mongodb-driver-core/3.12.0/mongodb-driver-core-3.12.0.jar:/Users/smr1/.m2/repository/org/mongodb/bson/3.12.0/bson-3.12.0.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-java/4.0.0-alpha-3/selenium-java-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-api/4.0.0-alpha-3/selenium-api-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.0.0-alpha-3/selenium-chrome-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/com/google/guava/guava/27.1-jre/guava-27.1-jre.jar:/Users/smr1/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/smr1/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/smr1/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/smr1/.m2/repository/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.jar:/Users/smr1/.m2/repository/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0.jar:/Users/smr1/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/smr1/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.0.0-alpha-3/selenium-chromium-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-devtools/4.0.0-alpha-3/selenium-devtools-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-http/4.0.0-alpha-3/selenium-http-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-json/4.0.0-alpha-3/selenium-json-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.0.0-alpha-3/selenium-edge-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-edgehtml-driver/4.0.0-alpha-3/selenium-edgehtml-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.0.0-alpha-3/selenium-firefox-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-firefox-xpi-driver/4.0.0-alpha-3/selenium-firefox-xpi-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.0.0-alpha-3/selenium-ie-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/4.0.0-alpha-3/selenium-opera-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.0.0-alpha-3/selenium-remote-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/com/squareup/okhttp3/okhttp/4.0.1/okhttp-4.0.1.jar:/Users/smr1/.m2/repository/com/squareup/okio/okio/2.2.2/okio-2.2.2.jar:/Users/smr1/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.3.40/kotlin-stdlib-1.3.40.jar:/Users/smr1/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.3.40/kotlin-stdlib-common-1.3.40.jar:/Users/smr1/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/smr1/.m2/repository/io/opentracing/opentracing-api/0.33.0/opentracing-api-0.33.0.jar:/Users/smr1/.m2/repository/net/bytebuddy/byte-buddy/1.9.12/byte-buddy-1.9.12.jar:/Users/smr1/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.0.0-alpha-3/selenium-safari-driver-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/org/seleniumhq/selenium/selenium-support/4.0.0-alpha-3/selenium-support-4.0.0-alpha-3.jar:/Users/smr1/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/smr1/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/smr1/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/Users/smr1/.m2/repository/org/apache/maven/surefire/surefire-testng-utils/2.21.0/surefire-testng-utils-2.21.0.jar:/Users/smr1/.m2/repository/org/apache/maven/surefire/surefire-grouper/2.21.0/surefire-grouper-2.21.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/smr1"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-07-14"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-14.0.2.jdk/Contents/Home"/>
+    <property name="basedir" value="/Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template"/>
+    <property name="style.color" value="always"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template/target/surefire/surefirebooter13106173502089377143.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="14.0.2+12-46"/>
+    <property name="user.name" value="smr1"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.15.5"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="browser" value="chrome"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/smr1/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/3_/05zsr3_x777dpmqtmxtl8br80000gn/T/"/>
+    <property name="java.version" value="14.0.2"/>
+    <property name="user.dir" value="/Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="headless" value="false"/>
+    <property name="java.library.path" value="/Users/smr1/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="14.0.2+12-46"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="58.0"/>
+  </properties>
+  <testcase name="runScenario" classname="org.suborg.project.teamname.runner.CucumberTestRunner" time="8.685">
+    <failure message="expected [false] but found [true]" type="java.lang.AssertionError">java.lang.AssertionError: expected [false] but found [true]
+</failure>
+    <system-out><![CDATA[...
+... TestNG 7.0.1 by CÃ©dric Beust (cedric@beust.com)
+...
+
+15:59:59.617 [main] INFO  o.s.p.teamname.runner.NGTestListener - --------resource initialization for all tests completed-----------------------
+15:59:59.814 [TestNG-PoolService-1] DEBUG o.s.p.t.runner.CucumberTestRunner - --------------setup iniated for the test-------------------
+15:59:59.814 [TestNG-PoolService-2] DEBUG o.s.p.t.runner.CucumberTestRunner - --------------setup iniated for the test-------------------
+15:59:59.814 [TestNG-PoolService-0] DEBUG o.s.p.t.runner.CucumberTestRunner - --------------setup iniated for the test-------------------
+15:59:59.820 [TestNG-PoolService-2] DEBUG o.s.p.teamname.baseconfig.Driver - chrome browser running with headless mode off
+15:59:59.820 [TestNG-PoolService-1] DEBUG o.s.p.teamname.baseconfig.Driver - chrome browser running with headless mode off
+15:59:59.820 [TestNG-PoolService-0] DEBUG o.s.p.teamname.baseconfig.Driver - chrome browser running with headless mode off
+16:00:01.737 [TestNG-PoolService-1] DEBUG o.s.p.t.runner.CucumberTestRunner - --------------setup completed. ready for test execution-------
+16:00:01.737 [TestNG-PoolService-0] DEBUG o.s.p.t.runner.CucumberTestRunner - --------------setup completed. ready for test execution-------
+16:00:01.739 [TestNG-PoolService-2] DEBUG o.s.p.t.runner.CucumberTestRunner - --------------setup completed. ready for test execution-------
+16:00:01.740 [TestNG-PoolService-1] INFO  o.s.p.teamname.runner.NGTestListener - On test start--------------starting test-------------------
+16:00:01.740 [TestNG-PoolService-0] INFO  o.s.p.teamname.runner.NGTestListener - On test start--------------starting test-------------------
+16:00:01.740 [TestNG-PoolService-2] INFO  o.s.p.teamname.runner.NGTestListener - On test start--------------starting test-------------------
+
+@DemoFeature1 @tag2
+Scenario Outline: Title of your scenario outline # src/test/resources/features/DemoFeature1.feature:42
+
+@DemoFeature1 @tag1
+Scenario: Title of your scenario                       # src/test/resources/features/DemoFeature1.feature:24
+
+@DemoFeature1 @tag2
+Scenario Outline: Title of your scenario outline # src/test/resources/features/DemoFeature1.feature:41
+16:00:01.956 [TestNG-PoolService-0] INFO  o.s.p.t.s.DemoFeature1Step - Writing step with precondition
+16:00:01.956 [TestNG-PoolService-1] INFO  o.s.p.t.s.DemoFeature1Step - writing a step with the name - name1
+16:00:01.956 [TestNG-PoolService-2] INFO  o.s.p.t.s.DemoFeature1Step - writing a step with the name - name2
+  Given _1df1 I want to write a step with precondition # org.suborg.project.teamname.stepdefinition.DemoFeature1Step.i_want_to_write_a_step_with_precondition()
+  Given _2df1 I want to write a step with name2  # org.suborg.project.teamname.stepdefinition.DemoFeature1Step._2_i_want_to_write_a_step_with_name1(java.lang.String)
+  Given _2df1 I want to write a step with name1  # org.suborg.project.teamname.stepdefinition.DemoFeature1Step._2_i_want_to_write_a_step_with_name1(java.lang.String)
+16:00:01.960 [TestNG-PoolService-2] INFO  o.s.p.t.s.DemoFeature1Step - checking for the value - 7
+16:00:01.960 [TestNG-PoolService-0] INFO  o.s.p.t.s.DemoFeature1Step - Writing step with some other precondition
+16:00:01.960 [TestNG-PoolService-1] INFO  o.s.p.t.s.DemoFeature1Step - checking for the value - 5
+  And _1df1 some other precondition                    # org.suborg.project.teamname.stepdefinition.DemoFeature1Step.some_other_precondition()
+16:00:10.412 [TestNG-PoolService-0] INFO  o.s.p.t.s.DemoFeature1Step - completing the action right now
+  When _1df1 I complete action                         # org.suborg.project.teamname.stepdefinition.DemoFeature1Step.i_complete_action()
+16:00:10.412 [TestNG-PoolService-0] INFO  o.s.p.t.s.DemoFeature1Step - completing some other action
+  And _1df1 some other action                          # org.suborg.project.teamname.stepdefinition.DemoFeature1Step.some_other_action()
+16:00:10.412 [TestNG-PoolService-0] INFO  o.s.p.t.s.DemoFeature1Step - completing yet another action
+  And _1df1 yet another action                         # org.suborg.project.teamname.stepdefinition.DemoFeature1Step.yet_another_action()
+      java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertFalse(Assert.java:65)
+	at org.testng.Assert.assertFalse(Assert.java:75)
+	at org.suborg.project.teamname.stepdefinition.DemoFeature1Step.yet_another_action(DemoFeature1Step.java:53)
+	at ✽._1df1 yet another action(file:///Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template/src/test/resources/features/DemoFeature1.feature:29)
+
+  Then _1df1 I validate the outcomes                   # org.suborg.project.teamname.stepdefinition.DemoFeature1Step.i_validate_the_outcomes()
+  And _1df1 check more outcomes                        # org.suborg.project.teamname.stepdefinition.DemoFeature1Step.check_more_outcomes()
+]]></system-out>
+    <system-err><![CDATA[Aug 17, 2020 3:59:59 PM io.cucumber.testng.TestNGCucumberRunner <init>
+WARNING: By default Cucumber is running in --non-strict mode.
+This default will change to --strict and --non-strict will be removed.
+You can use --strict or @CucumberOptions(strict = true) to suppress this warning
+StSaSttarting Crting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19bhromeDriver 83.0.41a0rting Ch506d84440rome3.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) oDrn port 23040
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+0483861342c20cd-refs/branch-heads/4103@{#416}) on port 20602
+iver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 27978
+Only local connectChromeODrivnly loical eornconns are w allowed.
+Please see https://chroectimedriver.chromium.org/security-consideratioas sntas for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+ons are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDrted successfully.
+river was started successfully.
+[1597694401.509][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
+[1597694401.569][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
+[1597694401.590][WARNING]: This version of ChromeDriver has not been tested with Chrome version 84.
+Aug 17, 2020 4:00:01 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Aug 17, 2020 4:00:01 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Aug 17, 2020 4:00:01 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario" classname="org.suborg.project.teamname.runner.CucumberTestRunner" time="15.231"/>
+  <testcase name="runScenario" classname="org.suborg.project.teamname.runner.CucumberTestRunner" time="15.231"/>
+</testsuite>

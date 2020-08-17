@@ -14,23 +14,27 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Driver implements WebDriver {
+public class Driver {
 	private static Logger logger = LoggerFactory.getLogger(Driver.class);
-	private static String browserName = System.getProperty("browser");
 	private static String headless = System.getProperty("headless");
-	private static WebDriver driver;
-
+	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	int defaultimplicitwaittime = 15;
 	int executionslowdowntime = 6;
 	int pageloadtimeout = 10;
 
-	public Driver() throws MalformedURLException {
+
+	public static WebDriver getDriver() {
+		return driver.get();
+	}
+
+	public Driver(String browserName) {
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
@@ -44,110 +48,41 @@ public class Driver implements WebDriver {
 
 			String chromedriverpath = System.getProperty("user.dir") + "/src/test/resources/drivers/chromedriver";
 			System.setProperty("webdriver.chrome.driver", chromedriverpath);
-			Driver.driver = new ChromeDriver(options);
-			// driver.manage().timeouts().implicitlyWait(defaultimplicitwaittime,TimeUnit.SECONDS)
-			driver.manage().timeouts().pageLoadTimeout(pageloadtimeout, TimeUnit.SECONDS);
+			driver.set(new ChromeDriver(options));
+			driver.get().manage().timeouts().implicitlyWait(defaultimplicitwaittime, TimeUnit.SECONDS);
+			driver.get().manage().timeouts().pageLoadTimeout(pageloadtimeout, TimeUnit.SECONDS);
+			
 
 		}
 
 		else if (browserName.equalsIgnoreCase("firefox")) {
 			String firefoxdriverpath = System.getProperty("user.dir") + "/src/test/resources/drivers/geckodriver";
 			System.setProperty("webdriver.gecko.driver", firefoxdriverpath);
-			Driver.driver = new FirefoxDriver();
+			FirefoxOptions options = new FirefoxOptions();
+			driver.set(new FirefoxDriver(options));
+
 		}
 
 		else if (browserName.equalsIgnoreCase("ie")) {
-			Driver.driver = new InternetExplorerDriver();
 
-		} 
-		else if (browserName.equalsIgnoreCase("remote")) {
-			// in future modify maven with sytemvariables (remote browser-name, browser-version, platform-name) 
+		} else if (browserName.equalsIgnoreCase("remote")) {
+			// in future modify maven with sytemvariables (remote browser-name,
+			// browser-version, platform-name)
 			DesiredCapabilities dc = new DesiredCapabilities();
 			dc.setBrowserName("chrome");
-			//dc.setPlatform(Platform.WIN10);
-			Driver.driver= new RemoteWebDriver(new URL(ApplicationConstants.URL_SELENIUMGRID_HUB),dc);
+			// dc.setPlatform(Platform.WIN10);
+			try {
+				driver.set(new RemoteWebDriver(new URL(ApplicationConstants.URL_SELENIUMGRID_HUB), dc));
+			} catch (MalformedURLException e) {
+				logger.debug("----malformed hub ip address entered, check the ip address---");
+				e.printStackTrace();
+			}
 		}
-		
-		
-		
+
 		else {
 			logger.debug("Unknown browser name specified in the system variable");
 		}
 
-	}
-
-	@Override
-	public void get(String url) {
-		Driver.driver.get(url);
-
-	}
-
-	@Override
-	public String getCurrentUrl() {
-		return Driver.driver.getCurrentUrl();
-	}
-
-	@Override
-	public String getTitle() {
-
-		return Driver.driver.getTitle();
-	}
-
-	@Override
-	public List<WebElement> findElements(By by) {
-
-		return Driver.driver.findElements(by);
-	}
-
-	@Override
-	public WebElement findElement(By by) {
-
-		return Driver.driver.findElement(by);
-	}
-
-	@Override
-	public String getPageSource() {
-		return Driver.driver.getPageSource();
-	}
-
-	@Override
-	public void close() {
-		Driver.driver.close();
-
-	}
-
-	@Override
-	public void quit() {
-		Driver.driver.quit();
-	}
-
-	@Override
-	public Set<String> getWindowHandles() {
-		return Driver.driver.getWindowHandles();
-	}
-
-	@Override
-	public String getWindowHandle() {
-		return Driver.driver.getWindowHandle();
-	}
-
-	@Override
-	public TargetLocator switchTo() {
-		return Driver.driver.switchTo();
-	}
-
-	@Override
-	public Navigation navigate() {
-		return Driver.driver.navigate();
-	}
-
-	@Override
-	public Options manage() {
-		return Driver.driver.manage();
-	}
-
-	public static WebDriver getDriver() {
-		return driver;
 	}
 
 }
