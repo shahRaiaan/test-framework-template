@@ -1,7 +1,0 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.924 s <<< FAILURE! - in TestSuite
-runScenario(org.suborg.project.teamname.runner.CucumberTestRunner)  Time elapsed: 8.175 s  <<< FAILURE!
-java.lang.AssertionError: expected [false] but found [true]
-

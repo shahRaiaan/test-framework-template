@@ -20,7 +20,7 @@ public class CustomWaitsUtility {
 		TimeUnit time = TimeUnit.SECONDS;
 		try {
 			time.sleep(executionspeedslowdown);
-			logger.debug("Execution speed set to - " + executionspeedslowdown);
+			
 		}
 
 		catch (InterruptedException e) {

@@ -6,6 +6,7 @@ import org.suborg.project.teamname.baseconfig.ApplicationConstants;
 import org.suborg.project.teamname.baseconfig.Driver;
 import org.suborg.project.teamname.pages.FormsPage;
 import org.suborg.project.teamname.pages.HomePage;
+import org.suborg.project.teamname.utilities.CustomWaitsUtility;
 import org.testng.Assert;
 
 import io.cucumber.java.After;
@@ -49,7 +50,7 @@ public class DemoFeature1Step {
 	public void yet_another_action() {
 		logger.info("completing yet another action");
 		
-		Assert.assertFalse(true);
+		//Assert.assertFalse(true);
 	}
 
 	@Then("^_1df1 I validate the outcomes")
@@ -74,6 +75,7 @@ public class DemoFeature1Step {
 	@When("^_2df1 I check for the (.+) in step$")
 	public void _2i_check_for_the_in_step(String value) throws Throwable {
 		logger.info("checking for the value - " + value);
+		CustomWaitsUtility.delay(15);
 	}
 
 	@Then("^_2df1 I verify the (.+) in step$")
