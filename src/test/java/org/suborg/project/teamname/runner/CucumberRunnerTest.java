@@ -16,8 +16,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(monochrome = true, plugin = { "pretty", "json:target/cucumber.json",
 		"html:target/site/cucumber-pretty","timeline:target/site/threadvisualizer" }, features = { "src/test/resources/features" }, glue = {
 				"org.suborg.project.teamname.stepdefinition" }, dryRun = false, tags = { "@DemoFeature1" })
-public class CucumberTestRunner extends AbstractTestNGCucumberTests {
-	private static Logger logger = LoggerFactory.getLogger(CucumberTestRunner.class);
+public class CucumberRunnerTest extends AbstractTestNGCucumberTests {
+	private static Logger logger = LoggerFactory.getLogger(CucumberRunnerTest.class);
 
 	@BeforeMethod
 	public void setup() throws MalformedURLException {

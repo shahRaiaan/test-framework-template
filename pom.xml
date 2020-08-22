@@ -41,14 +41,20 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.21.0</version>
 				<configuration>
-
 					<systemPropertyVariables>
 						<browser>chrome</browser>
 						<headless>false</headless>
 					</systemPropertyVariables>
-					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
+					<properties>
+						<property>
+							<name>parallel</name>
+							<value>methods</value>
+						</property>
+						<property>
+							<name>dataproviderthreadcount</name>
+							<value>30</value>
+						</property>
+					</properties>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>

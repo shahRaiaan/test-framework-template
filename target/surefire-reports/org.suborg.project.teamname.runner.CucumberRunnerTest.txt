@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: org.suborg.project.teamname.runner.CucumberRunnerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 18.51 s <<< FAILURE! - in org.suborg.project.teamname.runner.CucumberRunnerTest
+runScenario(org.suborg.project.teamname.runner.CucumberRunnerTest)  Time elapsed: 8.271 s  <<< FAILURE!
+java.lang.AssertionError: expected [false] but found [true]
+
