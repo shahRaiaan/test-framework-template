@@ -16,6 +16,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
 
 public class DemoFeature1Step {
 	private static Logger logger = LoggerFactory.getLogger(DemoFeature1Step.class);
@@ -38,6 +40,13 @@ public class DemoFeature1Step {
 
 	@When("^_1df1 I complete action")
 	public void i_complete_action() {
+		
+		
+		
+		
+		Response response = RestAssured.get("https://reqres.in/api/users?page=2");
+		logger.info("The status code is--- "+response.getStatusCode());
+		logger.info(response.getBody().asString());
 		logger.info("completing the action right now");
 	}
 
@@ -50,7 +59,7 @@ public class DemoFeature1Step {
 	public void yet_another_action() {
 		logger.info("completing yet another action");
 		
-		Assert.assertFalse(true);
+		//Assert.assertFalse(true);
 	}
 
 	@Then("^_1df1 I validate the outcomes")

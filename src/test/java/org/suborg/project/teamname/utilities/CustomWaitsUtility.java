@@ -1,6 +1,7 @@
 package org.suborg.project.teamname.utilities;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
@@ -48,5 +49,9 @@ public class CustomWaitsUtility {
 		return wait.until(ExpectedConditions.visibilityOf(webelement));
 
 	}
+	public static List<WebElement> visibilityOfAllElements(WebElement webelement, int timeout) {
+		WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
+		return wait.until(ExpectedConditions.visibilityOfAllElements(webelement));
 
+	}
 }

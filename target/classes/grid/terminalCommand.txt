@@ -1,6 +1,0 @@
-cd ~/
-cd /Users/smr1/Documents/AutomationTemplatePersonal/project/test-framework-template/src/main/resources/grid
-java -jar selenium-server-standalone-3.141.59.jar -role hub -hubConfig hubconfig.json
-
-
--Dbrowser=remote -Dverify=CucumberTestRunner clean verify
