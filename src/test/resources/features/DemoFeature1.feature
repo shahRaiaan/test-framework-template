@@ -19,7 +19,7 @@
 @DemoFeature1
 Feature: Demo feature
   I want to use this template for my feature file
-
+  
   @tag1
   Scenario: Title of your scenario
     Given _1df1 I want to write a step with precondition

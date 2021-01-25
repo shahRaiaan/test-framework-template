@@ -46,7 +46,7 @@ public class Driver {
 				logger.debug("chrome browser running with headless mode off");
 			}
 
-			String chromedriverpath = System.getProperty("user.dir") + "/src/test/resources/drivers/chromedriver";
+			String chromedriverpath = System.getProperty("user.dir") + "/src/test/resources/drivers/chromedriver.exe";
 			System.setProperty("webdriver.chrome.driver", chromedriverpath);
 			driver.set(new ChromeDriver(options));
 			driver.get().manage().timeouts().implicitlyWait(defaultimplicitwaittime, TimeUnit.SECONDS);
