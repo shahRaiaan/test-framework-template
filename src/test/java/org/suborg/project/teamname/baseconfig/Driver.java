@@ -11,6 +11,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -38,7 +39,16 @@ public class Driver {
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			ChromeOptions options = new ChromeOptions();
-
+             options = new ChromeOptions();
+//             options.addArguments("test-type");
+//             options.addArguments("disable-infobars");
+//             options.addArguments("--start-maximized");
+//             options.addArguments("--no-sandbox");
+//             options.addArguments("--disable-web-security"); // don't enforce the same-origin policy
+//             options.addArguments("--allow-running-insecure-content");// goes together with --disable-web
+//             options.addArguments("--disable-extensions");
+//             options.setExperimentalOption("useAutomationExtension", false);
+			
 			if ("true".equals(headless)) {
 				options.addArguments("--headless");
 				logger.info("chrome browser running with headless mode on");
